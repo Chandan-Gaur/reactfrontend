@@ -6,17 +6,18 @@ import { useDownloadExcel } from 'react-export-table-to-excel'
 import { useRef } from 'react'
 import { utils, read } from 'xlsx'
 import { excel } from 'react-export-table-to-excel/lib/lib'
-
+import Cookies from 'js-cookie';
 //--------------------------Axios Api Data Fatch -------------------------------
 const Merchantsdata = () => {
     const [ExcelData, setExcelData] = useState([]);
     // const [excelErorr, setexcelErorr] = useState([])
     const [merchants, setmerchants] = useState([]);
-
+    
     useEffect(() => {
-        axios.get('http://192.168.91.163:8080/Singhtek/merchants', {
+      
+        axios.get('https://payout-justpay.onrender.com/Singhtek/merchants', {
             headers: {
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDZkZjA4MTU3ZTJhODMxYzM4NDY4ZWIiLCJpYXQiOjE2ODQ5MjkxODB9.t8F8BySoZ697SRL6-Nzt34JAEuKipU3VkrWMHAe7jBc'
+                'Authorization': `Bearer ${Cookies.get('_auth')}`
             },
         })
             .then(function (response) {
