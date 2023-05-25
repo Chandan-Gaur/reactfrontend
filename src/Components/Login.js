@@ -8,6 +8,7 @@ import { useForm } from "react-hook-form";
 const Login = () => {
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
+  const [userType, setusertype] = useState("Singhtek Users");
   const loginIn = useSignIn();
   const { handleSubmit, formState } = useForm();
   const { isSubmitting } = formState;
@@ -20,19 +21,22 @@ const Login = () => {
       case "password":
         setpassword(e.target.value);
         break;
+        case "selectuser":
+          setusertype(e.target.value);
+          break;
       default:
     }
   };
 
   const submitform = async () => {
-    console.log(email, password);
+    console.log(email, password . userType);
     const userData = {
       email,
       password,
     };
     console.log(userData);
     try {
-      const result = await LoginSinghTek(userData);
+      const result = await LoginSinghTek(userData , userType);
       if (result != "error") {
         loginIn({
           token: result,
@@ -90,6 +94,7 @@ const Login = () => {
                               placeholder="Email Address"
                               name="email"
                               onChange={handleChange}
+                              required
                             />
                           </div>
                           <div className="col-12">
@@ -142,11 +147,16 @@ const Login = () => {
                               data-select2-id={1}
                               tabIndex={-1}
                               aria-hidden="true"
-                            >
-                              <option value="United States" data-select2-id={3}>
+                              onChange={handleChange}
+                              name="selectuser"
+                            > 
+                              <option value="Singhtek Users" data-select2-id={1}>
+                                Select
+                              </option>
+                              <option value="Singhtek Users" data-select2-id={2}>
                                 Singhtek Users
                               </option>
-                              <option value="United Kingdom" data-select2-id={28}>
+                              <option value="Merchants" data-select2-id={3}>
                                 Merchants
                               </option>
 

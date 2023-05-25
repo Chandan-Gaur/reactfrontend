@@ -204,14 +204,59 @@ export default function Register() {
 
                           <div className="col-sm-6">
                             <label className="form-label">User Type</label>
-                            <input
-                              type="text"
-                              className="form-control"
-                              name="user_type"
-                              required
-                              onChange={handleChange}
-                            />
+                            <select
+                            className="single-select select2-hidden-accessible form-control"
+                            data-select2-id={1}
+                            tabIndex={-1}
+                            aria-hidden="true"
+                            onChange={handleChange}
+                            name="user_type" 
+                          >
+                            <option value="Select" data-select2-id={0}>
+                              Select
+                            </option>
+                            <option value="Singhtek Users" data-select2-id={1}>
+                              Singhtek Users
+                            </option>
+                            <option value="Merchants" data-select2-id={2}>
+                              Merchants
+                            </option>
+
+                          </select>
+                          <span
+                            className="select2 select2-container select2-container--bootstrap4 select2-container--below select2-container--focus"
+                            dir="ltr"
+                            data-select2-id={2}
+                          >
+                            <span className="selection">
+                              <span
+                                className="select2-selection select2-selection--single"
+                                role="combobox"
+                                aria-haspopup="true"
+                                aria-expanded="false"
+                                tabIndex={0}
+                                aria-labelledby="select2-2yzs-container"
+                              >
+                                <span
+                                  className="select2-selection__rendered"
+                                  id="select2-2yzs-container"
+                                  role="textbox"
+                                  aria-readonly="true"
+                                  title="Afghanistan"
+                                >
+
+                                </span>
+                                <span className="select2-selection__arrow" role="presentation">
+                                  <b role="presentation" />
+                                </span>
+                              </span>
+                            </span>
+                            <span className="dropdown-wrapper" aria-hidden="true" />
+                          </span>
                           </div>
+
+
+                        
 
                           <div className="col-sm-6">
                             <label className="form-label">Password</label>
@@ -295,7 +340,7 @@ export default function Register() {
                 </div>
               </div>
             </div>
-            {/*end row*/}
+            {/end row/}
           </div>
         </div>
       </div>

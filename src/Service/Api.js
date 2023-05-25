@@ -15,14 +15,29 @@ export const addSinghTek = async (data) => {
   }
 };
 
-export const LoginSinghTek = async (data) => {
-  const res = await axios.post(`${url}/SinghTek/login`, data);
-  try {
-    if (res.status === 200 && res.data) {
-      return res.data;
-    }
-    return "error";
-  } catch (error) {
-    console.log(error);
+export const LoginSinghTek = async (data , userType) => {
+  if(userType=="Singhtek Users")
+  {
+      try {
+        const res = await axios.post(`${url}/SinghTek/login`, data);
+        if (res.status === 200 && res.data) {
+          return res.data;
+        }
+        return "error";
+      } catch (error) {
+        console.log(error);
+      }
   }
+  else if (userType=="Merchants"){
+    try {
+      const res = await axios.post(`${url}/Merchant/login`, data);
+      if (res.status === 200 && res.data) {
+        return res.data;
+      }
+      return "error";
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  
 };
