@@ -1,5 +1,5 @@
-import React from 'react'
-import Sidebar from './Sidebar'
+import React from "react";
+import Sidebar from "./Sidebar";
 
 const Home = () => {
   return (
@@ -21,7 +21,7 @@ const Home = () => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ width: '55%' }}
+                      style={{ width: "55%" }}
                       aria-valuenow={25}
                       aria-valuemin={0}
                       aria-valuemax={100}
@@ -50,7 +50,7 @@ const Home = () => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ width: '55%' }}
+                      style={{ width: "55%" }}
                       aria-valuenow={25}
                       aria-valuemin={0}
                       aria-valuemax={100}
@@ -79,7 +79,7 @@ const Home = () => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ width: '55%' }}
+                      style={{ width: "55%" }}
                       aria-valuenow={25}
                       aria-valuemin={0}
                       aria-valuemax={100}
@@ -108,7 +108,7 @@ const Home = () => {
                     <div
                       className="progress-bar"
                       role="progressbar"
-                      style={{ width: '55%' }}
+                      style={{ width: "55%" }}
                       aria-valuenow={25}
                       aria-valuemin={0}
                       aria-valuemax={100}
@@ -181,10 +181,11 @@ const Home = () => {
                     <div className="p-3">
                       <h5 className="mb-0">45.87M</h5>
                       <small className="mb-0">
-                        Overall Visitor{' '}
+                        Overall Visitor{" "}
                         <span>
-                          {' '}
-                          <i className="bx bx-up-arrow-alt align-middle" /> 2.43%
+                          {" "}
+                          <i className="bx bx-up-arrow-alt align-middle" />{" "}
+                          2.43%
                         </span>
                       </small>
                     </div>
@@ -193,10 +194,11 @@ const Home = () => {
                     <div className="p-3">
                       <h5 className="mb-0">15:48</h5>
                       <small className="mb-0">
-                        Visitor Duration{' '}
+                        Visitor Duration{" "}
                         <span>
-                          {' '}
-                          <i className="bx bx-up-arrow-alt align-middle" /> 12.65%
+                          {" "}
+                          <i className="bx bx-up-arrow-alt align-middle" />{" "}
+                          12.65%
                         </span>
                       </small>
                     </div>
@@ -205,10 +207,11 @@ const Home = () => {
                     <div className="p-3">
                       <h5 className="mb-0">245.65</h5>
                       <small className="mb-0">
-                        Pages/Visit{' '}
+                        Pages/Visit{" "}
                         <span>
-                          {' '}
-                          <i className="bx bx-up-arrow-alt align-middle" /> 5.62%
+                          {" "}
+                          <i className="bx bx-up-arrow-alt align-middle" />{" "}
+                          5.62%
                         </span>
                       </small>
                     </div>
@@ -301,7 +304,8 @@ const Home = () => {
                     <div className="ms-3">
                       <h6 className="mb-0">Sales Of Total Payout</h6>
                       <small className="mb-0">
-                        22.14% <i className="bx bxs-up-arrow align-middle me-1" />
+                        22.14%{" "}
+                        <i className="bx bxs-up-arrow align-middle me-1" />
                         Since Last Week
                       </small>
                     </div>
@@ -322,7 +326,8 @@ const Home = () => {
                     <div className="ms-3">
                       <h6 className="mb-0">Twitter Tweets</h6>
                       <small className="mb-0">
-                        32.15% <i className="bx bxs-up-arrow align-middle me-1" />
+                        32.15%{" "}
+                        <i className="bx bxs-up-arrow align-middle me-1" />
                         Since Last Week
                       </small>
                     </div>
@@ -343,7 +348,8 @@ const Home = () => {
                     <div className="ms-3">
                       <h6 className="mb-0">Youtube Subscribers</h6>
                       <small className="mb-0">
-                        58.24% <i className="bx bxs-up-arrow align-middle me-1" />
+                        58.24%{" "}
+                        <i className="bx bxs-up-arrow align-middle me-1" />
                         Since Last Week
                       </small>
                     </div>
@@ -463,7 +469,7 @@ const Home = () => {
                     <div className="card-body">
                       <p className="mb-2">Page Views</p>
                       <h4 className="mb-0">
-                        8,293{' '}
+                        8,293{" "}
                         <small className="font-13 text-white">
                           5.2% <i className="bx bx-up-arrow-alt" />
                         </small>
@@ -479,7 +485,7 @@ const Home = () => {
                     <div className="card-body">
                       <p className="mb-2">Total Clicks</p>
                       <h4 className="mb-0">
-                        7,493{' '}
+                        7,493{" "}
                         <small className="font-13 text-white">
                           1.4% <i className="bx bx-up-arrow-alt" />
                         </small>
@@ -509,7 +515,8 @@ const Home = () => {
                       />
                       <hr />
                       <p className="mb-0 small-font text-center">
-                        3.4% <i className="zmdi zmdi-long-arrow-up" /> since yesterday
+                        3.4% <i className="zmdi zmdi-long-arrow-up" /> since
+                        yesterday
                       </p>
                     </div>
                   </div>
@@ -527,7 +534,7 @@ const Home = () => {
                         <div className="progress" style={{ height: 5 }}>
                           <div
                             className="progress-bar bg-white"
-                            style={{ width: '80%' }}
+                            style={{ width: "80%" }}
                           />
                         </div>
                       </div>
@@ -538,7 +545,7 @@ const Home = () => {
                         <div className="progress" style={{ height: 5 }}>
                           <div
                             className="progress-bar bg-white"
-                            style={{ width: '60%' }}
+                            style={{ width: "60%" }}
                           />
                         </div>
                       </div>
@@ -549,7 +556,7 @@ const Home = () => {
                         <div className="progress" style={{ height: 5 }}>
                           <div
                             className="progress-bar bg-white"
-                            style={{ width: '40%' }}
+                            style={{ width: "40%" }}
                           />
                         </div>
                       </div>
@@ -585,12 +592,10 @@ const Home = () => {
             </div>
           </div>
           {/*End Row*/}
-
         </div>
       </div>
-
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
