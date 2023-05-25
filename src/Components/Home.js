@@ -1,5 +1,6 @@
 import React from "react";
 import Sidebar from "./Sidebar";
+import { withSignOut } from 'react-auth-kit'
 
 const Home = () => {
   return (

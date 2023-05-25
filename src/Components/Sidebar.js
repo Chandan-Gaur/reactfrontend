@@ -1,8 +1,9 @@
 /* eslint-disable jsx-a11y/alt-text */
 import React from 'react'
 import { Link } from 'react-router-dom'
-
+import { useSignOut } from 'react-auth-kit'
 const Sidebar = () => {
+    const signOut = useSignOut()
     return (
         <div>
             {
@@ -616,7 +617,7 @@ const Sidebar = () => {
                                 <li>
                                     <a className="dropdown-item" href="javascript:;">
                                         <i className="bx bx-log-out-circle" />
-                                        <span>Logout</span>
+                                        <button onClick={() => signOut()}>Sign Out</button>
                                     </a>
                                 </li>
                             </ul>

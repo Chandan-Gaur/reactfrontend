@@ -112,12 +112,10 @@ const Login = () => {
                                 name="password"
                                 placeholder="Enter Password"
                               />{" "}
-                              <a
-                                href="javascript:;"
-                                className="input-group-text bg-transparent"
-                              >
+                              <Link to="" className="input-group-text bg-transparent">
                                 <i className="bx bx-hide" />
-                              </a>
+                              </Link>
+
                             </div>
                           </div>
                           <div className="col-md-6">
@@ -136,6 +134,57 @@ const Login = () => {
                               </label>
                             </div>
                           </div>
+
+                          <div className="mb-3">
+                            <label className="form-label">Choose </label> <br />
+                            <select
+                              className="single-select select2-hidden-accessible"
+                              data-select2-id={1}
+                              tabIndex={-1}
+                              aria-hidden="true"
+                            >
+                              <option value="United States" data-select2-id={3}>
+                                Singhtek Users
+                              </option>
+                              <option value="United Kingdom" data-select2-id={28}>
+                                Merchants
+                              </option>
+
+                            </select>
+                            <span
+                              className="select2 select2-container select2-container--bootstrap4 select2-container--below select2-container--focus"
+                              dir="ltr"
+                              data-select2-id={2}
+                            >
+                              <span className="selection">
+                                <span
+                                  className="select2-selection select2-selection--single"
+                                  role="combobox"
+                                  aria-haspopup="true"
+                                  aria-expanded="false"
+                                  tabIndex={0}
+                                  aria-labelledby="select2-2yzs-container"
+                                >
+                                  <span
+                                    className="select2-selection__rendered"
+                                    id="select2-2yzs-container"
+                                    role="textbox"
+                                    aria-readonly="true"
+                                    title="Afghanistan"
+                                  >
+
+                                  </span>
+                                  <span className="select2-selection__arrow" role="presentation">
+                                    <b role="presentation" />
+                                  </span>
+                                </span>
+                              </span>
+                              <span className="dropdown-wrapper" aria-hidden="true" />
+                            </span>
+                          </div>;
+
+
+
                           <div className="col-md-6 text-end">
                             {" "}
                             <a href="authentication-forgot-password.html">
