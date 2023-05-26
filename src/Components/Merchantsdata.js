@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-import Sidebar from './Sidebar'
+import Sidebar from '../utils/sidebar/Sidebar'
 import { useState, useEffect } from 'react'
 import { useDownloadExcel } from 'react-export-table-to-excel'
 import { useRef } from 'react'

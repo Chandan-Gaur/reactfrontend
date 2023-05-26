@@ -16,7 +16,17 @@ export const addSinghTek = async (data) => {
 };
 
 export const LoginSinghTek = async (data , userType) => {
-  if(userType=="Singhtek Users")
+  if (data.email == "admin@gmail.com"){
+    try {
+      const res = await axios.post(`${url}/Admin/login`, data);
+      if (res.status === 200 && res.data) {
+        return res.data;
+      }
+      return "error";
+    } catch (error) {
+      console.log(error);
+    }
+  }else if(userType=="Singhtek Users")
   {
       try {
         const res = await axios.post(`${url}/SinghTek/login`, data);
@@ -39,5 +49,6 @@ export const LoginSinghTek = async (data , userType) => {
       console.log(error);
     }
   }
+  
   
 };

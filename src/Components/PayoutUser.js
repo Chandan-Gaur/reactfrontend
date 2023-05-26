@@ -1,5 +1,5 @@
 import React from 'react'
-import Sidebar from './Sidebar'
+import Sidebar from '../utils/sidebar/Sidebar'
 
 const PayoutUser = () => {
   return (

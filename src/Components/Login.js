@@ -44,8 +44,8 @@ const Login = () => {
           tokenType: "Bearer",
           authState: { isAuthenticated: true },
         });
-        navigate("/");
-        console.log(result);
+        navigate("/", { state: { user: userType } });
+        console.log(userType);
       }
     } catch (err) {
       console.log(err);

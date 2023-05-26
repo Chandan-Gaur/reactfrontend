@@ -1,17 +1,23 @@
-import React from 'react'
-import Sidebar from '../utils/sidebar/Sidebar'
-
+import React from "react";
+import Sidebar from "../../utils/sidebar/Sidebar";
+import { useLocation } from "react-router-dom";
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Link } from 'react-router-dom'
-const MerchantsUserData = () => {
-    const [users, setusers] = useState([]);
+import Cookies from 'js-cookie';
+const Home = () => {
+  const {state} = useLocation();
+  const { user } = state; 
+  const [val,setval] = useState();
+  const [users, setusers] = useState([]);
     const [mer, setmer] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
-    useEffect(() => {
-        axios.get('http://192.168.91.163:8080/Merchant/users', {
+    useEffect(async () => {
+       if({user} !=  null || {user} != undefined)
+       {
+         const url = user == "Singhtek Users" ? "SinghTek/merchants" : "Merchant/users";
+       await axios.get(`https://payout-justpay.onrender.com/${url}`, {
             headers: {
-                'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDZkZjA4MTU3ZTJhODMxYzM4NDY4ZWIiLCJpYXQiOjE2ODQ5MjkxODB9.t8F8BySoZ697SRL6-Nzt34JAEuKipU3VkrWMHAe7jBc'
+                'Authorization': `Bearer ${Cookies.get('_auth')}`
             },
         })
             .then(function (response) {
@@ -20,14 +26,18 @@ const MerchantsUserData = () => {
             })
             .catch(function (error) {
                 console.log(error);
+            });}
+            else{
+              setval({user});
+            }
+    }, [val]);
 
-            });
-    }, []);
+   // console.log({user});
+  return (
+    <div>
+      <Sidebar />
 
-    return (
-        <div>
-            <Sidebar />
-            <div className="card  table-outer">
+      <div className="card  table-outer">
                 <div className="card-body">
                     <div className="table-responsive">
                         <table id="example2" className="table table-striped table-bordered">
@@ -76,8 +86,8 @@ const MerchantsUserData = () => {
                     </div>
                 </div>
             </div>
-        </div>
-    )
-}
+    </div>
+  );
+  };
 
-export default MerchantsUserData
+export default Home;
